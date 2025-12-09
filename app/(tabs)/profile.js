@@ -1,16 +1,30 @@
-import { View, Text, Image } from 'react-native'
+import { View, Text, Image, StyleSheet} from 'react-native'
 import React from 'react'
 import { icons } from "../../constants/icons";
+import { Stack } from 'expo-router';
 
 export default function profile() {
-  console.log("ICON TYPE:", typeof icons.NetflixIcon);
-  console.log("ICON VALUE:", icons.NetflixIcon);
-
   return (
-    <View>
-      <Text>profile</Text>
+    <>
+    <Stack.Screen options={{ headerShown: false }} />
+    <View style={styles.container}>
+      <Text style={styles.text}>profile</Text>
       {/* <NetflixIcon width={50} height={50} color="black" /> */}
       <Image source={icons.NetflixIcon} style={{ width: 50, height: 50 , alignItems: 'center'}} />
     </View>
+    </>
   )
 }
+
+const styles = StyleSheet.create({
+    container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'black',
+    padding: 20,
+  },
+  text: {
+    color: 'white',
+  }
+})

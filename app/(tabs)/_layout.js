@@ -20,6 +20,9 @@ export default function Layout() {
                 borderRadius: 40,
                 bottom: 40,
                 left: 0,
+                borderTopWidth: 1,
+                borderTopColor: '#e26b6bff',
+                borderColor: '#e26b6bff',
             },
             
                 tabBarShowLabel: false,
